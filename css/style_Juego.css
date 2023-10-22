@@ -1,0 +1,182 @@
+/* -------------------------------------------------LETRAS IMPORTE-------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap");
+
+/* font-family: 'Gothic A1';
+   font-style: normal;
+
+   font-family: 'Overpass';
+   font-style: normal;
+
+   font-family: 'Poppins';
+   font-style: normal;
+
+   font-family: 'Onest';
+   font-style: normal;
+
+   font-family: 'Rubik';
+   font-style: normal;
+   */
+/* -------------------------------------------------GENERAL-------------------------------------------------------- */
+* {
+  padding: 0px;
+  margin: 0px;
+  /*   box-sizing: border-box; */
+}
+
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+}
+
+/* -------------------------------------------------DIVS GENERALES-------------------------------------------------------- */
+#Contenedor_Principal {
+  background-color: BLACK;
+  width: 100%;
+  height: 55vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+#Contenedor_Tiempos {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  gap: 7vh;
+}
+
+#Contenedor_Secundario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 45vh;
+}
+
+#Contenedor_Respuestas {
+  margin-top: 5vb;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 3vw;
+  grid-row-gap: 3vh;
+}
+
+#Contenedor_Bonus {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1vw, 50%, 6vw);
+}
+
+/* -------------------------------------------------BOTONES BAJOS-------------------------------------------------------- */
+
+.sec1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.sec2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.sec3 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.sec4 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.Botones_Selección {
+  width: 45vw;
+  height: 12vh;
+  border-style: none;
+  border-radius: 2cap;
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: rgb(0, 0, 0);
+  font-family: "Rubik", sans-serif;
+  font-size: calc(0.8em + 0.8vw);
+  overflow: hidden;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.Botones_Bonus {
+  width: 20vh;
+  height: 6vh;
+  border-style: none;
+  border-radius: 1cap;
+  background-color: #a7a7a78a;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-size: /* calc(0.5em + 0.7vw) */ clamp(1.5vw, 100%, 4vw);
+  font-family: "Poppins", sans-serif;
+  z-index: 2;
+  overflow: hidden;
+}
+/* ---------------------ANIMACIÓN BOTONES BONUS--------------------- */
+
+/* ---------------------ANIMACIÓN BOTONES SELECCIÓN--------------------- */
+
+.Botones_Selección:hover {
+  background: #04f7ff;
+  box-shadow: 0 0 10px #04f7ff5d, 0 0 40px #04f7ff57, 0 0 80px #04f7ff4b;
+  transition-delay: 0.25s;
+  border-radius: 2cap;
+}
+/* --------------------------------------TÍTULO-------------------------------------- */
+#Título_Principal {
+  text-align: center;
+  z-index: 1;
+  color: aliceblue;
+  margin-bottom: 5vh;
+  font-size: 6vw;
+  font-family: "Rubik", sans-serif;
+}
+/* @keyframes neon {
+  0% {
+    text-shadow: 0 0 30px #a7a7a73d, 0 0 20px #a7a7a73d, 0 0 30px #a7a7a73d,
+      0 0 30px #a7a7a73d;
+  }
+
+  100% {
+    text-shadow: 0 0 50px #a7a7a73d, 0 0 60px #a7a7a73d, 0 0 80px #a7a7a73d,
+      0 0 90px #a7a7a73d;
+  }
+}
+
+.neon-text {
+  animation: neon 3s linear infinite alternate;
+} */
+/* -------------------------------------------------BARRA DE TIEMPO-------------------------------------------------------- */
+#BarraTiempoEscucha {
+  background-color: #ffffff;
+  width: 80vw;
+  height: 2.5vh;
+  border-radius: 2cap;
+}
+#BarraTiempoSelección {
+  background-color: aliceblue;
+  width: 90vw;
+  height: 3vh;
+  border-radius: 2cap;
+}
+
+.BarraProgreso {
+  width: 100vw;
+  height: 100vh;
+  background-color: antiquewhite;
+  border-radius: 2cap;
+}

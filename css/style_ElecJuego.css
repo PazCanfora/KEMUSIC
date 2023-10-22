@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@500&display=swap");
+
+/* -------------------------------------------------GENERAL-------------------------------------------------- */
+html {
+  scroll-behavior:smooth;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* -------------------------------------------------HEADER-------------------------------------------------- */
+
+#TIT_GEN {
+  color: rgb(255, 255, 255);
+  font-family: "Onest", sans-serif;
+  font-size: 6vb; 
+  margin-top: 20vb;
+}
+
+/* ---------------------------------------------TÍTULO CARTAS-------------------------------------------------- */
+.TIT_CARDS{
+  color: rgb(255, 255, 255);
+  font-family: "Onest", sans-serif;
+  font-size: 10vb; 
+  margin-bottom: 0;
+  text-align: center;
+
+}
+/* -------------------------------------------------CARTAS-------------------------------------------------- */
+
+#Cont_Cards {
+  z-index: 2;
+  display: flex;
+  justify-content: CENTER;
+  align-items: center;
+  position: absolute;
+  top:45%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.Complet_Cards{
+  margin-top: 5vb;
+  margin-right: 2VW;
+}
+
+.Complet_Cards:last-child {
+  margin-right: 0vw;
+} /* Saca el margen derecho del último articule */
+
+article {
+  width: 22vw;
+  height: 1vw/* 32vw */;
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------ANIMACIÓN CARDS. */
+
+article:hover {
+  transform: perspective(15vw) rotateX(3deg) translateY(-5%) translateZ(0);
+  height: 32vw;
+}
+
+article:hover ~ .Complet_Cards p {
+  display: none;
+}
+
+article:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 10%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0) 95%
+  );
+  opacity: 0;
+  transition: all 0.3 ease;
+}
+
+article:hover::before {
+  opacity: 1;
+}
+
+/* article:hover #LadyGaga_Card {
+  opacity: 1;
+  transform: translateY(10%);
+} */
+
+/* #LadyGaga_Card {
+  position: absolute;
+  width: 10vw;
+  height: 13vw;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(25%);
+  transition: 0.3s ease;
+  opacity: 0;
+} */
+
+.Cards {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  object-fit: cover;
+}
+
+#Card_Clasic {
+  background-image: url("../img/Vivaldi.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#Card_Pop {
+  background-image: url("../img/MichaelJackson.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#Card_Rock {
+  background-image: url("../img/FreddyMercury.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+#Card_Mix {
+  background-image: url("../img/Elcuartetodenos.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* --------------------------------------------------------------BOTÓN SALIDA. */
+.BT_MJ {
+  z-index: 0;
+  width: 16vb;
+  height: 6vb;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 20px;
+  position: absolute;
+  top: 86vb;
+}
+
+.BT_MJ a {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  font-size: 3vb;
+  color: rgb(0, 0, 0);
+}

@@ -1,0 +1,114 @@
+/* -------------------------------------------------LETRAS IMPORTE-------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@500&display=swap");
+
+/* -------------------------------------------------CARACTERÍSTICAS PRINCIPALES-------------------------------------------------- */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(
+    -45deg,
+    rgb(255, 255, 255),
+    rgb(231, 230, 230),
+    rgb(192, 192, 192),
+    rgb(255, 255, 255)
+  );
+  background-size: 400% 400%;
+  animation: animate 10s ease infinite;
+}
+
+/* -------------------------------------------------BOTONES PRINCIPALES-------------------------------------------------- */
+#TIT_JU {
+  margin-top: 25vb;
+  font-size: 22.5vb;
+  color: rgb(0, 0, 0);
+  font-family: "Poppins",
+    sans-serif /* 'Overpass', sans-serif  */ /* 'Gothic A1', sans-serif */;
+}
+
+.BT_IN {
+  margin-top: 4vb;
+  z-index: 1;
+  width: 60vb;
+  height: 15vb;
+  background: linear-gradient(
+    -45deg,
+    rgb(32, 197, 17),
+    rgb(26, 95, 12),
+    rgb(113, 155, 15)
+  );
+  background-size: 400% 400%;
+  animation: animate 10s ease infinite;
+  border: none;
+  border-radius: 20px;
+}
+
+.BT_IN a {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  font-size: 6vb;
+  color: rgb(255, 255, 255);
+}
+
+.BT_MJ {
+  margin-top: 2vb;
+  z-index: 1;
+  width: 30vb;
+  height: 10vb;
+  background-color: rgb(0, 0, 0);
+  font-family: "Overpass", sans-serif;
+  font-size: 4vb;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 15.8vb;
+}
+
+#IMG_OND {
+  width: 60%;
+  height: AUTO;
+  position: absolute;
+  top: 0;
+  left: 40%;
+  z-index: 1;
+}
+/* -----------------------------------------------------PARTE BAJA------------------------------------------------------- */
+#DIV_PB {
+  background-color: black;
+  height: 100vb;
+  display: flex;
+  justify-content: center;
+}
+
+#TIT_IG {
+  margin-top: 10vb;
+  color: rgb(255, 255, 255);
+  font-family: "Onest", sans-serif;
+  position: relative;
+  z-index: 1;
+  font-size: 6vb;
+}
+
+/* -----------------------------------------------------ANIMACIONES------------------------------------------------------- */
+@media (max-width: 768px) {
+  #contenedor {
+    font-size: medium;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
