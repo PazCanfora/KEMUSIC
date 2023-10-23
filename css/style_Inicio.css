@@ -5,6 +5,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@500&display=swap");
 
 /* -------------------------------------------------CARACTERÍSTICAS PRINCIPALES-------------------------------------------------- */
+*{
+  user-select: none;
+}
 
 main {
   display: flex;
@@ -25,17 +28,17 @@ main {
 /* -------------------------------------------------BOTONES PRINCIPALES-------------------------------------------------- */
 #TIT_JU {
   margin-top: 25vb;
-  font-size: 22.5vb;
+  font-size: 13vw;
   color: rgb(0, 0, 0);
   font-family: "Poppins",
     sans-serif /* 'Overpass', sans-serif  */ /* 'Gothic A1', sans-serif */;
 }
 
 .BT_IN {
-  margin-top: 4vb;
+  margin-top: 2.3vb;
   z-index: 1;
-  width: 60vb;
-  height: 15vb;
+  width: 25vw;
+  height: 15vh;
   background: linear-gradient(
     -45deg,
     rgb(32, 197, 17),
@@ -51,18 +54,18 @@ main {
 .BT_IN a {
   font-family: "Poppins", sans-serif;
   text-decoration: none;
-  font-size: 6vb;
-  color: rgb(255, 255, 255);
+  font-size: 2.7vw;
+  color: rgb(255, 255, 255); 
 }
 
 .BT_MJ {
   margin-top: 2vb;
   z-index: 1;
-  width: 30vb;
-  height: 10vb;
+  width: 15vw;
+  height: 10vh;
   background-color: rgb(0, 0, 0);
   font-family: "Overpass", sans-serif;
-  font-size: 4vb;
+  font-size: 2vw;
   color: rgb(255, 255, 255);
   border: none;
   border-radius: 20px;
@@ -77,10 +80,11 @@ main {
   left: 40%;
   z-index: 1;
 }
+
 /* -----------------------------------------------------PARTE BAJA------------------------------------------------------- */
 #DIV_PB {
   background-color: black;
-  height: 100vb;
+  height: 100vh;
   display: flex;
   justify-content: center;
 }
@@ -91,7 +95,8 @@ main {
   font-family: "Onest", sans-serif;
   position: relative;
   z-index: 1;
-  font-size: 6vb;
+  font-size: 3.5vw;
+  user-select: none;
 }
 
 /* -----------------------------------------------------ANIMACIONES------------------------------------------------------- */

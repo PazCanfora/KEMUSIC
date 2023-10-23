@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@500&display=swap");
 
 /* -------------------------------------------------GENERAL-------------------------------------------------- */
+
 html {
   scroll-behavior:smooth;
 }
@@ -21,18 +22,19 @@ body {
 #TIT_GEN {
   color: rgb(255, 255, 255);
   font-family: "Onest", sans-serif;
-  font-size: 6vb; 
-  margin-top: 20vb;
+  font-size: 3vw; 
+  margin-top: 22vb;
+  user-select: none;
 }
 
 /* ---------------------------------------------TÍTULO CARTAS-------------------------------------------------- */
 .TIT_CARDS{
   color: rgb(255, 255, 255);
   font-family: "Onest", sans-serif;
-  font-size: 10vb; 
+  font-size: 5vw; 
   margin-bottom: 0;
   text-align: center;
-
+  user-select: none;
 }
 /* -------------------------------------------------CARTAS-------------------------------------------------- */
 
@@ -69,6 +71,7 @@ article {
 article:hover {
   transform: perspective(15vw) rotateX(3deg) translateY(-5%) translateZ(0);
   height: 32vw;
+  cursor: pointer;
 }
 
 article:hover ~ .Complet_Cards p {
@@ -156,6 +159,7 @@ article:hover::before {
   border-radius: 20px;
   position: absolute;
   top: 86vb;
+  user-select: none;
 }
 
 .BT_MJ a {
@@ -163,4 +167,5 @@ article:hover::before {
   text-decoration: none;
   font-size: 3vb;
   color: rgb(0, 0, 0);
+  user-select: none;
 }

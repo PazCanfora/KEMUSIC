@@ -20,3 +20,5 @@ divMixto.onclick = () => {
     window.localStorage.setItem('choose', '4');
     window.location.href = "./JUEGOS/Mixto.html";
 };
+
+

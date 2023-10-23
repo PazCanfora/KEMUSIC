@@ -24,7 +24,8 @@
 * {
   padding: 0px;
   margin: 0px;
-  /*   box-sizing: border-box; */
+  box-sizing: border-box;
+  user-select: none;
 }
 
 body {
@@ -33,20 +34,88 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* overflow: hidden; */
+  overflow: hidden;
+}
+
+/* -------------------------------------------------MENÚ DE ARRANQUE-------------------------------------------------------- */
+/* ---------------------CONTENEDORES GENERAL--------------------- */
+#CONT_JuegoArranque{
+ width: 100vw;
+ height: 100vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ overflow: hidden;
+}
+#CONT_Botones{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4vh;
+}
+#TIT_GEN1{
+  color: rgb(255, 255, 255);
+  font-family: "Onest", sans-serif;
+  font-size: 6vw;
+  margin-bottom: 6vh;
+}
+
+/* ---------------------BOTONES ARRANQUE--------------------- */
+#BTN_Inicio{
+  width: 20vw;
+  height: 13vh;
+  background: linear-gradient(
+      -45deg,
+      rgb(32, 197, 17),
+      rgb(26, 95, 12),
+      rgb(113, 155, 15)
+    );
+  background-size: 400% 400%;
+  animation: animate 10s ease infinite;
+  border: none;
+  border-radius: 30px;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  font-size: 2.7vw;
+  color: rgb(255, 255, 255);
+}
+#BTN_Atrás{
+  width: 12vw;
+  height: 10vh;
+  border-radius: 30px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  font-size: 2vw;
+  color: rgb(255, 255, 255); 
+  background: linear-gradient(
+      -45deg,
+      rgb(0, 0, 0),
+      rgb(44, 44, 44),
+      rgb(0, 0, 0)
+    );
+  background-size: 400% 400%;
+  animation: animate 5s ease infinite;
+}
+#BTN_Inicio:hover {
+  cursor: pointer;
+}
+#BTN_Atrás:hover {
+  cursor: help;
 }
 
 /* -------------------------------------------------DIVS GENERALES-------------------------------------------------------- */
 #Contenedor_Principal {
   background-color: BLACK;
-  width: 100%;
+  width: 100vw;
   height: 55vh;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
 }
-
 #Contenedor_Tiempos {
   display: flex;
   justify-content: flex-end;
@@ -54,16 +123,14 @@ body {
   flex-direction: column;
   gap: 7vh;
 }
-
 #Contenedor_Secundario {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  width: 100vw;
   height: 45vh;
 }
-
 #Contenedor_Respuestas {
   margin-top: 5vb;
   display: grid;
@@ -72,9 +139,8 @@ body {
   grid-column-gap: 3vw;
   grid-row-gap: 3vh;
 }
-
 #Contenedor_Bonus {
-  width: 100%;
+  width: 100vw;
   height: 20vh;
   display: flex;
   align-items: center;
@@ -83,20 +149,6 @@ body {
 }
 
 /* -------------------------------------------------BOTONES BAJOS-------------------------------------------------------- */
-
-.sec1 {
-  grid-area: 1 / 1 / 2 / 2;
-}
-.sec2 {
-  grid-area: 1 / 2 / 2 / 3;
-}
-.sec3 {
-  grid-area: 2 / 1 / 3 / 2;
-}
-.sec4 {
-  grid-area: 2 / 2 / 3 / 3;
-}
-
 .Botones_Selección {
   width: 45vw;
   height: 12vh;
@@ -112,7 +164,6 @@ body {
   transition: 0.2s;
   cursor: pointer;
 }
-
 .Botones_Bonus {
   width: 20vh;
   height: 6vh;
@@ -126,23 +177,35 @@ body {
   z-index: 2;
   overflow: hidden;
 }
+.sec1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.sec2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.sec3 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.sec4 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
 /* ---------------------ANIMACIÓN BOTONES BONUS--------------------- */
-
 /* ---------------------ANIMACIÓN BOTONES SELECCIÓN--------------------- */
-
 .Botones_Selección:hover {
   background: #04f7ff;
   box-shadow: 0 0 10px #04f7ff5d, 0 0 40px #04f7ff57, 0 0 80px #04f7ff4b;
   transition-delay: 0.25s;
   border-radius: 2cap;
 }
+
 /* --------------------------------------TÍTULO-------------------------------------- */
 #Título_Principal {
   text-align: center;
   z-index: 1;
   color: aliceblue;
   margin-bottom: 5vh;
-  font-size: 6vw;
+  font-size: 5vw;
   font-family: "Rubik", sans-serif;
 }
 /* @keyframes neon {
@@ -160,6 +223,7 @@ body {
 .neon-text {
   animation: neon 3s linear infinite alternate;
 } */
+
 /* -------------------------------------------------BARRA DE TIEMPO-------------------------------------------------------- */
 #BarraTiempoEscucha {
   background-color: #ffffff;
@@ -173,10 +237,21 @@ body {
   height: 3vh;
   border-radius: 2cap;
 }
-
 .BarraProgreso {
   width: 100vw;
   height: 100vh;
   background-color: antiquewhite;
   border-radius: 2cap;
+}
+/* -------------------------------------------------ANIMACIONES-------------------------------------------------------- */
+@keyframes animate {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }

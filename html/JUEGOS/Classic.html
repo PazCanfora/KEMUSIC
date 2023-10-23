@@ -7,65 +7,18 @@
     <link rel="stylesheet" href="../../css/style_Juego.css" />
   </head>
   <body>
-    <div>
-      <!-- ------------------------------------ CONTENEDOR PRINCIPAL ------------------------------------ -->
-      <div id="Contenedor_Principal">
-        <h1 id="Título_Principal" class="neon-text">¿Qué canción suena?</h1>
-        <div id="Contenedor_Tiempos">
-          <div id="BarraTiempoEscucha">
-            <span class="BarraProgreso"></span>
-          </div>
-
-          <div id="BarraTiempoSelección">
-            <span class="BarraProgreso"></span>
-          </div>
-        </div>
+    
+    <div id="CONT_JuegoArranque">
+      
+      <h1 id="TIT_GEN1">¿LISTO PARA INICIAR?</h1>
+      <div id="CONT_Botones">
+        <button id="BTN_Inicio" onclick="agregarHTML()">ARRANCAR</button>
+        <button id="BTN_Atrás">ATRÁS</button>      
       </div>
+    </div> 
 
-      <!-- ------------------------------------ CONTENEDOR SECUNDARIO ------------------------------------ -->
-      <div id="Contenedor_Secundario">
-        <div id="Contenedor_Respuestas">
-          <button class="Botones_Selección sec1" onmousedown="boop.play()">
-            <span id="span1"></span>
-            <span id="span2"></span>
-            <span id="span3"></span>
-            <span id="span4"></span> SUMMER - ANTONIO VIVALDI
-          </button>
-          <button class="Botones_Selección sec2" onmousedown="boop.play()">
-            <span id="span1"></span>
-            <span id="span2"></span>
-            <span id="span3"></span>
-            <span id="span4"></span> LIBERTANGO - PIAZZOLLA
-          </button>
-          <button class="Botones_Selección sec3" onmousedown="boop.play()">
-            <span id="span1"></span>
-            <span id="span2"></span>
-            <span id="span3"></span>
-            <span id="span4"></span> CZARDAS - MONTI
-          </button>
-          <button class="Botones_Selección sec4" onmousedown="boop.play()">
-            <span id="span1"></span>
-            <span id="span2"></span>
-            <span id="span3"></span>
-            <span id="span4"></span> WINTER - ANTONIO VIVALDI
-          </button>
-        </div>
+    <div id="Juego">
 
-        <div id="Contenedor_Bonus">
-          <button class="Botones_Bonus" onmousedown="bonus.play()">
-            PAUSA
-          </button>
-          <button class="Botones_Bonus" onmousedown="bonus.play()">
-            LENTO
-          </button>
-          <button class="Botones_Bonus" onmousedown="bonus.play()">
-            RÁPIDO
-          </button>
-          <button class="Botones_Bonus" onmousedown="bonus.play()">
-            PISTA
-          </button>
-        </div>
-      </div>
     </div>
 
     <script src="../../js/script_Juego.js"></script>
