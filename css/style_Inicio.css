@@ -5,7 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@500&display=swap");
 
 /* -------------------------------------------------CARACTERÍSTICAS PRINCIPALES-------------------------------------------------- */
-*{
+* {
   user-select: none;
 }
 
@@ -55,7 +55,7 @@ main {
   font-family: "Poppins", sans-serif;
   text-decoration: none;
   font-size: 2.7vw;
-  color: rgb(255, 255, 255); 
+  color: rgb(255, 255, 255);
 }
 
 .BT_MJ {

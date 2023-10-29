@@ -5,6 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap");
 
+/* #035D32 */
 /* font-family: 'Gothic A1';
    font-style: normal;
 
@@ -38,40 +39,48 @@ body {
 }
 
 /* -------------------------------------------------MENÚ DE ARRANQUE-------------------------------------------------------- */
-/* ---------------------CONTENEDORES GENERAL--------------------- */
-#CONT_JuegoArranque{
- width: 100vw;
- height: 100vh;
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- overflow: hidden;
+/* ---------------------TÍTULO LISTO PARA JUGAR--------------------- */
+#TIT_GEN1 {
+  color: rgb(255, 255, 255);
+  font-family: "Onest", sans-serif;
+  font-size: 6vw;
+  margin-bottom: 6vh;
 }
-#CONT_Botones{
+/* ---------------------CONTENEDORES GENERAL--------------------- */
+#CONT_JuegoArranque {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#CONT_Botones {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 4vh;
 }
-#TIT_GEN1{
-  color: rgb(255, 255, 255);
-  font-family: "Onest", sans-serif;
-  font-size: 6vw;
-  margin-bottom: 6vh;
+#CONT_Contador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
 }
-
 /* ---------------------BOTONES ARRANQUE--------------------- */
-#BTN_Inicio{
+#BTN_Inicio {
   width: 20vw;
   height: 13vh;
   background: linear-gradient(
-      -45deg,
-      rgb(32, 197, 17),
-      rgb(26, 95, 12),
-      rgb(113, 155, 15)
-    );
+    -45deg,
+    rgb(32, 197, 17),
+    rgb(26, 95, 12),
+    rgb(113, 155, 15)
+  );
   background-size: 400% 400%;
   animation: animate 10s ease infinite;
   border: none;
@@ -81,7 +90,7 @@ body {
   font-size: 2.7vw;
   color: rgb(255, 255, 255);
 }
-#BTN_Atrás{
+#BTN_Atrás {
   width: 12vw;
   height: 10vh;
   border-radius: 30px;
@@ -89,13 +98,13 @@ body {
   font-family: "Poppins", sans-serif;
   text-decoration: none;
   font-size: 2vw;
-  color: rgb(255, 255, 255); 
+  color: rgb(255, 255, 255);
   background: linear-gradient(
-      -45deg,
-      rgb(0, 0, 0),
-      rgb(44, 44, 44),
-      rgb(0, 0, 0)
-    );
+    -45deg,
+    rgb(0, 0, 0),
+    rgb(44, 44, 44),
+    rgb(0, 0, 0)
+  );
   background-size: 400% 400%;
   animation: animate 5s ease infinite;
 }
@@ -105,7 +114,15 @@ body {
 #BTN_Atrás:hover {
   cursor: help;
 }
+/* ---------------------CONTADOR--------------------- */
+#Contador {
+  color: aliceblue;
+  font-size: 30vw;
+  font-family: "Rubik";
+  font-style: normal;
+}
 
+/* -------------------------------------------------MENÚ DEL JUEGO-------------------------------------------------------- */
 /* -------------------------------------------------DIVS GENERALES-------------------------------------------------------- */
 #Contenedor_Principal {
   background-color: BLACK;
@@ -147,8 +164,8 @@ body {
   justify-content: center;
   gap: clamp(1vw, 50%, 6vw);
 }
-
 /* -------------------------------------------------BOTONES BAJOS-------------------------------------------------------- */
+/* ---------------------ANIMACIÓN BOTONES SELECCIÓN--------------------- */
 .Botones_Selección {
   width: 45vw;
   height: 12vh;
@@ -164,18 +181,11 @@ body {
   transition: 0.2s;
   cursor: pointer;
 }
-.Botones_Bonus {
-  width: 20vh;
-  height: 6vh;
-  border-style: none;
-  border-radius: 1cap;
-  background-color: #a7a7a78a;
-  cursor: pointer;
-  color: rgb(0, 0, 0);
-  font-size: /* calc(0.5em + 0.7vw) */ clamp(1.5vw, 100%, 4vw);
-  font-family: "Poppins", sans-serif;
-  z-index: 2;
-  overflow: hidden;
+.Botones_Selección:hover {
+  background: #cbdd01;
+  box-shadow: 0 0 10px #cbdd01, 0 0 40px #cbdd01, 0 0 80px #cbdd01;
+  transition-delay: 0s;
+  border-radius: 2cap;
 }
 .sec1 {
   grid-area: 1 / 1 / 2 / 2;
@@ -189,14 +199,43 @@ body {
 .sec4 {
   grid-area: 2 / 2 / 3 / 3;
 }
-
+.neon-text {
+  animation: neon 3s linear infinite alternate;
+}
 /* ---------------------ANIMACIÓN BOTONES BONUS--------------------- */
-/* ---------------------ANIMACIÓN BOTONES SELECCIÓN--------------------- */
-.Botones_Selección:hover {
-  background: #04f7ff;
-  box-shadow: 0 0 10px #04f7ff5d, 0 0 40px #04f7ff57, 0 0 80px #04f7ff4b;
-  transition-delay: 0.25s;
-  border-radius: 2cap;
+.Botones_Bonus {
+  width: 20vh;
+  height: 6vh;
+  border-style: none;
+  border-radius: 1cap;
+  background-color: #a7a7a78a;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-size: /* calc(0.5em + 0.7vw) */ clamp(1.5vw, 100%, 4vw);
+  font-family: "Poppins", sans-serif;
+  z-index: 2;
+  overflow: hidden;
+}
+.DIV_PAUSAPRE {
+  width: 20vh;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.PAUSA {
+  width: 50%;
+  height: 100%;
+}
+.PAUSA:hover {
+  cursor: pointer;
+}
+.PREGUNTA {
+  width: 50%;
+  height: 80%;
+}
+.PREGUNTA:hover {
+  cursor: pointer;
 }
 
 /* --------------------------------------TÍTULO-------------------------------------- */
@@ -208,22 +247,6 @@ body {
   font-size: 5vw;
   font-family: "Rubik", sans-serif;
 }
-/* @keyframes neon {
-  0% {
-    text-shadow: 0 0 30px #a7a7a73d, 0 0 20px #a7a7a73d, 0 0 30px #a7a7a73d,
-      0 0 30px #a7a7a73d;
-  }
-
-  100% {
-    text-shadow: 0 0 50px #a7a7a73d, 0 0 60px #a7a7a73d, 0 0 80px #a7a7a73d,
-      0 0 90px #a7a7a73d;
-  }
-}
-
-.neon-text {
-  animation: neon 3s linear infinite alternate;
-} */
-
 /* -------------------------------------------------BARRA DE TIEMPO-------------------------------------------------------- */
 #BarraTiempoEscucha {
   background-color: #ffffff;
@@ -243,6 +266,7 @@ body {
   background-color: antiquewhite;
   border-radius: 2cap;
 }
+
 /* -------------------------------------------------ANIMACIONES-------------------------------------------------------- */
 @keyframes animate {
   0% {
@@ -255,3 +279,14 @@ body {
     background-position: 0 50%;
   }
 }
+/* @keyframes neon {
+  0% {
+    text-shadow: 0 0 30px #a7a7a73d, 0 0 20px #a7a7a73d, 0 0 30px #a7a7a73d,
+      0 0 30px #a7a7a73d;
+  }
+
+  100% {
+    text-shadow: 0 0 50px #a7a7a73d, 0 0 60px #a7a7a73d, 0 0 80px #a7a7a73d,
+      0 0 90px #a7a7a73d;
+  }
+} */
