@@ -170,7 +170,7 @@ body {
   width: 45vw;
   height: 12vh;
   border-style: none;
-  border-radius: 2cap;
+  border-radius:2pc;
   position: relative;
   display: inline-block;
   padding: 15px 30px;
@@ -185,7 +185,7 @@ body {
   background: #cbdd01;
   box-shadow: 0 0 10px #cbdd01, 0 0 40px #cbdd01, 0 0 80px #cbdd01;
   transition-delay: 0s;
-  border-radius: 2cap;
+  border-radius: 2pc;
 }
 .sec1 {
   grid-area: 1 / 1 / 2 / 2;
@@ -252,21 +252,103 @@ body {
   background-color: #ffffff;
   width: 80vw;
   height: 2.5vh;
-  border-radius: 2cap;
+  border-radius: 2pc;
 }
 #BarraTiempoSelección {
   background-color: aliceblue;
   width: 90vw;
   height: 3vh;
-  border-radius: 2cap;
+  border-radius: 2pc;
 }
 .BarraProgreso {
   width: 100vw;
   height: 100vh;
   background-color: antiquewhite;
-  border-radius: 2cap;
+  border-radius: 2pc;
 }
+/* -------------------------------------------------SIGUIENTE RONDA-------------------------------------------------------- */
 
+#DivPausa {
+  width: 35vw;
+  height: 75vh;
+  background-color: #000000 /* rgb(126, 128, 17) */;
+  box-shadow: 20px 10px 40px rgba(255, 255, 255, 0.11);
+  border-radius: 5vh;
+  position: absolute;
+  top: 10vh;
+  left: 30vw;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#GanastePerdiste {
+  margin-top: 0vh;
+  font-size: 5.5vh;
+  color: rgb(255, 255, 255);
+  font-family: "Rubik";
+  font-style: normal;
+  text-align: center;
+}
+#Puntaje {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  font-size: 3vh;
+  margin-bottom: 2vh;
+  color: #cbdd01;
+  font-family: "Rubik";
+  font-style: normal;
+}
+#VideoYoutube {
+  width: 25vw;
+  height: 40vh;
+  border-radius: 5vh;
+  margin-bottom: 1vh;
+}
+#DivBotones{
+  display : flex;
+}
+.AtrásSiguiente {
+  margin-top: 1vh;
+  border-style: none;
+  border-radius: 1vh;
+}
+#Atrás {
+  width: 9vw;
+  height: 8vh;
+  font-size: 3.2vh;
+  font-family: "Rubik";
+  font-style: normal;
+  color: #000000;
+  background: linear-gradient(
+    -45deg,
+    rgb(207, 207, 207),
+    rgb(114, 114, 114),
+    rgb(172, 172, 172)
+  );
+  background-size: 400% 400%;
+  animation: animate 10s ease infinite;
+  border: none;
+}
+#Siguiente {
+  width: 15vw;
+  height: 8vh;
+  margin-left: 1vw;
+  font-size: 3.2vh;
+  font-family: "Rubik";
+  font-style: normal;
+  color: #000000;
+  background: linear-gradient(
+    -45deg,
+    rgb(207, 207, 207),
+    rgb(114, 114, 114),
+    rgb(172, 172, 172)
+  );
+  background-size: 400% 400%;
+  animation: animate 10s ease infinite;
+  border: none;
+}
 /* -------------------------------------------------ANIMACIONES-------------------------------------------------------- */
 @keyframes animate {
   0% {
